@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+temporary screenshots/
+
+# Reference/competitor mockups — not used by the live site
+Logo-Title-Mockup.png
+Mockup-Hero-1.png
+Services-dropdown.png
+indevets.com__ref=land-book.com.png
+thevalleyanimalhospital.com_.png
+www.universityanimalhospital.com_.png

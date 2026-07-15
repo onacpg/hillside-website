@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hillside Animal Clinic — Chino Hills, CA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            olive:      '#898433',
+            'olive-d':  '#45441A',
+            'olive-dk': '#282C15',
+            teal:       '#7E9DA2',
+            cream:      '#E5DECA',
+            ink:        '#3A3A3A',
+          },
+          fontFamily: {
+            display: ['"League Spartan"', 'sans-serif'],
+            body:    ['"Open Sans"', 'sans-serif'],
+          },
+        }
+      }
+    };
+  </script>
+  <style>
+    /* ─── CUSTOM FONTS ─── */
+    @font-face {
+      font-family: 'Helios Extended';
+      src: url('brand_assets/HeliosExt%20Bold.otf') format('opentype');
+      font-weight: 700 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Helios Extended';
+      src: url('brand_assets/HeliosExt.otf') format('opentype');
+      font-weight: 400 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Helios Extended';
+      src: url('brand_assets/HeliosExt%20Italic.otf') format('opentype');
+      font-weight: 400 900;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'TT Hoves';
+      src: url('brand_assets/TTHovesReg.ttf') format('truetype');
+      font-weight: 400 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --olive:    #898433;
+      --olive-d:  #45441A;
+      --olive-dk: #282C15;
+      --forest:   #5a592d;
+      --teal:     #7E9DA2;
+      --cream:    #E5DECA;
+      --ink:      #3A3A3A;
+      --ivory:    #F5F0E6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--ivory);
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Helios Extended', 'League Spartan', sans-serif;
+      letter-spacing: 0.01em;
+      margin: 0;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+    }
+    .btn:focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+    .btn:active { transform: translateY(0) !important; }
+
+    .btn-olive {
+      background: var(--olive);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(137,132,51,0.28);
+    }
+    .btn-olive:hover { background: var(--olive-d); transform: translateY(-1px); box-shadow: 0 4px 18px rgba(69,68,26,0.32); }
+
+    .btn-dark {
+      background: var(--forest);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(90,89,45,0.28);
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-weight: 700;
+      border: 2px solid transparent;
+    }
+    .btn-dark:hover { background: #46452a; transform: translateY(-1px); }
+
+    .btn-cream {
+      background: var(--cream);
+      color: var(--olive-dk);
+      box-shadow: 0 2px 10px rgba(229,222,202,0.2);
+    }
+    .btn-cream:hover { background: #fff; transform: translateY(-1px); box-shadow: 0 4px 18px rgba(255,255,255,0.25); }
+
+    .btn-ghost-cream {
+      background: transparent;
+      color: var(--cream);
+      border: 2px solid rgba(229,222,202,0.5);
+    }
+    .btn-ghost-cream:hover { background: rgba(229,222,202,0.1); border-color: var(--cream); transform: translateY(-1px); }
+
+    .btn-outline-olive {
+      background: transparent;
+      color: var(--olive);
+      border: 2px solid var(--olive);
+    }
+    .btn-outline-olive:hover { background: var(--olive); color: #fff; transform: translateY(-1px); }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--forest);
+      border: 2px solid var(--forest);
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-weight: 700;
+    }
+    .btn-outline-dark:hover { background: var(--forest); color: #fff; transform: translateY(-1px); }
+
+    /* ─── EYEBROW ─── */
+    .eyebrow {
+      display: inline-block;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--olive);
+      margin-bottom: 10px;
+    }
+    .eyebrow-light { color: rgba(229,222,202,0.6); }
+
+    /* ─── ANNOUNCEMENT BAR ─── */
+    .announce-bar {
+      background: var(--olive);
+      color: rgba(229,222,202,0.9);
+      text-align: center;
+      padding: 9px 20px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+    }
+    .announce-bar a {
+      color: var(--cream);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .announce-bar a:hover { opacity: 0.85; }
+
+    /* ─── NAVBAR ─── */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e0d0;
+      box-shadow: 0 2px 14px rgba(40,44,21,0.07);
+    }
+    .navbar-inner {
+      max-width: none;
+      margin: 0;
+      padding: 0 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      height: 88px;
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      text-decoration: none;
+      gap: 11px;
+    }
+    .navbar-icon-crop {
+      display: block;
+      width: 64px;
+      height: 63px;
+      flex-shrink: 0;
+      background: url('brand_assets/Hillside-Olive-Logo.png') no-repeat;
+      background-size: 148px auto;
+      background-position: -42px -10px;
+    }
+    .navbar-brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 6px;
+    }
+    .navbar-brand-name {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #5a592d;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      line-height: 1;
+    }
+    .navbar-brand-loc {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #5a592d;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      margin-top: 1px;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex: 1;
+      justify-content: center;
+    }
+    .nav-item { position: relative; }
+    .nav-trigger {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 14px;
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      border-radius: 7px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-trigger:hover { background: #f4f0e5; color: var(--olive-d); }
+    .nav-trigger:focus-visible { outline: 2px solid var(--olive); outline-offset: 2px; }
+    .nav-trigger svg { width: 12px; height: 12px; stroke: currentColor; transition: transform 0.2s; }
+    .nav-item:hover .nav-trigger svg { transform: rotate(180deg); }
+    .nav-link {
+      display: block;
+      padding: 8px 14px;
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      border-radius: 7px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-link:hover { background: #f4f0e5; color: var(--olive-d); }
+    .nav-link:focus-visible { outline: 2px solid var(--olive); outline-offset: 2px; }
+
+    .nav-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 210px;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e5e0d0;
+      box-shadow: 0 10px 36px rgba(40,44,21,0.13), 0 2px 8px rgba(40,44,21,0.07);
+      padding: 16px 6px 6px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-4px);
+      transition: opacity 0.15s 0.18s, transform 0.15s 0.18s;
+      z-index: 50;
+    }
+    .nav-item:hover .nav-dropdown,
+    .nav-item:focus-within .nav-dropdown {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .nav-dropdown a {
+      display: block;
+      padding: 9px 14px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      border-radius: 7px;
+      transition: background 0.13s, color 0.13s;
+    }
+    .nav-dropdown a:hover { background: #f4f0e5; color: var(--olive-d); }
+
+    .nav-dropdown-mega {
+      min-width: 560px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+    }
+    .nav-item:hover .nav-dropdown-mega,
+    .nav-item:focus-within .nav-dropdown-mega {
+      transform: translateX(-50%) translateY(0);
+    }
+    .mega-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr;
+      padding: 4px;
+    }
+    .mega-col-label {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #aaa;
+      padding: 8px 14px 2px;
+    }
+    .mega-footer {
+      border-top: 1px solid #e5e0d0;
+      text-align: center;
+    }
+    .mega-footer a {
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      color: var(--olive);
+    }
+
+    .navbar-phone-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--olive-dk);
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+    .burger:hover span { background: var(--olive); }
+
+    /* ─── MOBILE NAV ─── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      z-index: 200;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      border-bottom: 1px solid #e5e0d0;
+      flex-shrink: 0;
+    }
+    .mobile-nav-body { padding: 8px 20px; flex: 1; }
+    .mobile-group-label {
+      display: block;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #bbb;
+      padding: 20px 0 8px;
+    }
+    .mobile-nav-body a {
+      display: block;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--olive-dk);
+      padding: 11px 0;
+      border-bottom: 1px solid #f0ebe0;
+    }
+    .mobile-nav-body a.sub {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      padding-left: 14px;
+    }
+    .mobile-nav-foot {
+      padding: 20px;
+      border-top: 1px solid #e5e0d0;
+      flex-shrink: 0;
+    }
+    .mobile-nav-foot .btn { width: 100%; justify-content: center; }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: none;
+      margin: 0;
+      padding: 0 60px;
+      display: grid;
+      grid-template-columns: 65fr 35fr;
+      gap: 48px;
+      align-items: center;
+      min-height: calc(100vh - 130px);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-left {
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .hero-right {
+      padding: 48px 0;
+      display: flex;
+      align-items: center;
+    }
+    .hero-photo {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 8px 40px rgba(40,44,21,0.13);
+    }
+    .hero-carousel {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(40,44,21,0.13);
+    }
+    .carousel-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+    .carousel-slide.c-active { opacity: 1; }
+    .carousel-dots {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 2;
+    }
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.45);
+      cursor: pointer;
+      border: none;
+      padding: 0;
+      transition: background 0.3s;
+    }
+    .carousel-dot.c-active { background: rgba(255,255,255,0.95); }
+    .hero-welcome-label {
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Helios Extended', 'League Spartan', sans-serif;
+      font-size: clamp(36px, 4.2vw, 58px);
+      font-weight: 400;
+      color: #323815;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+    }
+    .hero-sunday {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 13px;
+      color: #888;
+      margin-top: 18px;
+    }
+    .hero-sunday + .hero-sunday { margin-top: 8px; }
+    .hero-sunday svg { width: 15px; height: 15px; flex-shrink: 0; color: #aaa; }
+    .hero-inline-btn {
+      background: none; border: none; padding: 0 0 1px; margin: 0;
+      font: inherit; color: inherit; cursor: pointer; text-align: left;
+      border-bottom: 1px dotted #bbb;
+    }
+    .hero-map-link { color: inherit; text-decoration: none; border-bottom: 1px dotted #bbb; padding-bottom: 1px; }
+    .hero-map-link:hover, .hero-inline-btn:hover { border-bottom-color: #888; }
+
+    /* ─── HOURS POPUP ─── */
+    .hero-hours-wrap { position: relative; display: inline-block; }
+    .hours-popup {
+      position: absolute;
+      bottom: calc(100% + 10px);
+      left: 0;
+      z-index: 300;
+      background: #fff;
+      border: 1px solid #e5e0d0;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(40,44,21,0.15), 0 2px 8px rgba(40,44,21,0.08);
+      width: 258px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(6px);
+      transition: opacity 0.16s, transform 0.16s;
+    }
+    .hours-popup.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    /* speech bubble tail – border layer (points down toward the hours row) */
+    .hours-popup::before {
+      content: '';
+      position: absolute;
+      bottom: -9px; left: 18px;
+      width: 0; height: 0;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-top: 9px solid #e5e0d0;
+    }
+    /* speech bubble tail – fill layer */
+    .hours-popup::after {
+      content: '';
+      position: absolute;
+      bottom: -7px; left: 19px;
+      width: 0; height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #fff;
+    }
+    .hours-popup-head {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 13px 16px 11px;
+      border-bottom: 1px solid #f0ebe0;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--olive-dk);
+    }
+    .hours-popup-close {
+      background: none; border: none; cursor: pointer; padding: 2px 4px;
+      font-size: 16px; line-height: 1; color: #aaa;
+      border-radius: 4px;
+    }
+    .hours-popup-close:hover { color: var(--ink); background: #f4f0e5; }
+    .hours-list {
+      list-style: none; margin: 0; padding: 6px 0 8px;
+    }
+    .hours-list li {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 6px 16px;
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 13px; color: #666;
+    }
+    .hours-list li.today {
+      background: #f5f2e8; color: var(--olive-dk); font-weight: 600;
+      border-radius: 6px; margin: 0 6px; padding: 6px 10px;
+    }
+    .hours-list li .h-day { flex-shrink: 0; }
+    .hours-list li .h-time { color: #888; }
+    .hours-list li.today .h-time { color: var(--olive); }
+    /* status word colour — only the Open / Closed word */
+    .hours-status-open   { color: #2a8040; }
+    .hours-status-closed { color: #c0392b; }
+    .anim-wrap {
+      position: relative;
+      width: 100%;
+      height: calc(clamp(32px, 3.8vw, 54px) * 1.25);
+      overflow: hidden;
+      margin-top: 4px;
+    }
+    .anim-word {
+      position: absolute;
+      inset: 0;
+      text-align: left;
+      white-space: nowrap;
+      font-family: 'Helios Extended', 'League Spartan', sans-serif;
+      font-size: clamp(32px, 3.8vw, 54px);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--teal);
+      opacity: 0;
+      transform: translateY(120%);
+      transition: transform 0.52s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+    }
+    .anim-word.anim-current {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .anim-word.anim-exit {
+      opacity: 0;
+      transform: translateY(-120%);
+      transition: transform 0.38s cubic-bezier(0.4, 0, 1, 1), opacity 0.22s ease;
+    }
+    .hero-sub {
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #555;
+      margin-top: 28px;
+      margin-bottom: 36px;
+      max-width: none;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
+
+    /* ─── WHY HILLSIDE ─── */
+    .why-section { background: #fff; padding-top: 40px; padding-bottom: 80px; }
+    .why-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 36px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 80px;
+      align-items: center;
+    }
+    .why-title {
+      font-family: 'Helios Extended', 'League Spartan', sans-serif;
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 700;
+      color: #5a592d;
+      line-height: 1.08;
+      margin-bottom: 36px;
+      letter-spacing: 0.02em;
+    }
+    .acc-list { border-top: 1px solid #e5e0d0; }
+    .acc-item { border-bottom: 1px solid #e5e0d0; }
+    .acc-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 22px 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+    .acc-trigger:focus-visible { outline: 2px solid var(--olive); outline-offset: -2px; }
+    .acc-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #f4f0e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+    .acc-icon svg { width: 22px; height: 22px; color: var(--olive); transition: color 0.2s; }
+    .acc-item.open .acc-icon { background: var(--olive); }
+    .acc-item.open .acc-icon svg { color: #fff; }
+    .acc-label {
+      flex: 1;
+      font-family: 'Helios Extended', 'League Spartan', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #5a592d;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .acc-chevron {
+      width: 20px;
+      height: 20px;
+      color: #bbb;
+      flex-shrink: 0;
+      transition: transform 0.25s, color 0.2s;
+    }
+    .acc-item.open .acc-chevron { transform: rotate(180deg); color: var(--olive); }
+    .acc-body {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+    .acc-item.open .acc-body { max-height: 240px; }
+    .acc-body-inner {
+      padding: 0 0 22px 62px;
+      font-family: 'TT Hoves', 'Open Sans', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #666;
+    }
+    .acc-body-inner a { color: var(--olive); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+
+    .why-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 16px 52px rgba(40,44,21,0.14), 0 4px 14px rgba(40,44,21,0.08);
+    }
+    .why-carousel {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 16px 52px rgba(40,44,21,0.14), 0 4px 14px rgba(40,44,21,0.08);
+    }
+    .why-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+    .why-slide.w-active { opacity: 1; }
+    .why-dots {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 2;
+    }
+    .why-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.45);
+      cursor: pointer;
+      border: none;
+      padding: 0;
+      transition: background 0.3s;
+    }
+    .why-dot.w-active { background: rgba(255,255,255,0.95); }
+
+    /* ─── USDA / TRAVEL ─── */
+    .usda-section { background: var(--cream); padding: 80px 0; }
+    .usda-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .usda-text h2 {
+      font-size: clamp(26px, 2.8vw, 40px);
+      font-weight: 900;
+      color: #5a592d;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+    .usda-text p {
+      font-size: 16px;
+      line-height: 1.78;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    .usda-img {
+      width: 100%;
+      aspect-ratio: 5/4;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 16px 52px rgba(40,44,21,0.14);
+    }
+
+    /* ─── WELCOME / CONTACT ─── */
+    .welcome-section { background: #fff; padding-top: 80px; padding-bottom: 40px; }
+    .welcome-inner { max-width: 1280px; margin: 0 auto; padding: 0 36px; }
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 40px;
+      align-items: stretch;
+    }
+    .welcome-map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(40,44,21,0.1);
+      min-height: 420px;
+    }
+    .contact-card {
+      background: #fff;
+      border: 1px solid #e5e0d0;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 24px rgba(40,44,21,0.08), 0 1px 4px rgba(40,44,21,0.05);
+    }
+    .contact-card-title {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--olive-dk);
+      margin-bottom: 24px;
+    }
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0ebe0;
+    }
+    .contact-row:last-of-type { border-bottom: none; }
+    .contact-icon-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: #f4f0e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon-wrap svg { width: 18px; height: 18px; color: var(--olive); }
+    .contact-info { flex: 1; }
+    .contact-info .clabel {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 4px;
+    }
+    .contact-info .cvalue {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--olive-dk);
+      line-height: 1.45;
+    }
+    .contact-card .btn { width: 100%; justify-content: center; margin-top: 24px; }
+    .directions-link {
+      display: block;
+      text-align: center;
+      margin-top: 13px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--olive);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .directions-link:hover { color: var(--olive-d); }
+
+    /* ─── SERVICES ─── */
+    .services-section { background: #f8f6f0; padding: 80px 0; }
+    .services-inner { max-width: 1280px; margin: 0 auto; padding: 0 36px; }
+    .services-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+    .services-head h2 {
+      font-size: clamp(22px, 2.6vw, 36px);
+      font-weight: 900;
+      color: #5a592d;
+      line-height: 1.12;
+      margin-bottom: 14px;
+    }
+    .svc-title-br { display: block; }
+    .services-sub {
+      font-size: 15px;
+      line-height: 1.72;
+      color: #888;
+      max-width: 780px;
+      margin: 0;
+    }
+    /* category sections */
+    .svc-categories { display: flex; flex-direction: column; gap: 40px; }
+    .svc-category {}
+    .svc-cat-label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-family: 'Helios Extended', 'League Spartan', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--olive);
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--olive);
+      margin-bottom: 20px;
+    }
+    .svc-cat-label svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .svc-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .svc-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px 20px;
+      border: 1px solid #e5e0d0;
+      box-shadow: 0 2px 10px rgba(40,44,21,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .svc-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(40,44,21,0.11); }
+    .svc-card:focus-visible { outline: 2px solid var(--olive); outline-offset: 2px; }
+    .svc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: #f4f0e5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .svc-icon svg { width: 22px; height: 22px; color: var(--olive); }
+    .svc-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--olive-dk);
+      margin-bottom: 7px;
+    }
+    .svc-card p { font-size: 14px; line-height: 1.65; color: #777; margin: 0; }
+
+    /* ─── NEW CLIENTS CTA ─── */
+    .new-clients { background: var(--olive-dk); padding: 80px 0; }
+    .new-clients-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .nc-img-wrap { position: relative; }
+    .nc-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 16px 52px rgba(0,0,0,0.28);
+      display: block;
+    }
+    .nc-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .nc-text h2 {
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .nc-text p {
+      font-size: 16px;
+      line-height: 1.78;
+      color: rgba(229,222,202,0.82);
+      margin-bottom: 36px;
+    }
+
+    /* ─── TEAM ─── */
+    .team-section { background: #fff; padding-top: 40px; padding-bottom: 40px; }
+    .team-inner { max-width: 1280px; margin: 0 auto; padding: 0 36px; }
+    .team-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .team-head h2 {
+      font-size: clamp(26px, 3vw, 42px);
+      font-weight: 900;
+      color: #5a592d;
+      line-height: 1.12;
+    }
+    .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; max-width: 610px; margin: 0 auto; }
+    .doc-card { text-align: center; }
+    .doc-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 28px rgba(40,44,21,0.11);
+    }
+    .doc-name {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--olive-dk);
+      margin-bottom: 4px;
+    }
+    .doc-title { font-size: 14px; color: #888; }
+
+    /* ─── NEWSLETTER ─── */
+    .newsletter { background: var(--olive-d); padding: 64px 0; }
+    .newsletter-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+    .nl-text h2 {
+      font-size: clamp(22px, 2.5vw, 34px);
+      font-weight: 900;
+      color: var(--cream);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .nl-text p { font-size: 15px; line-height: 1.65; color: rgba(229,222,202,0.72); max-width: 640px; }
+    .nl-form { display: flex; gap: 10px; flex-shrink: 0; min-width: 420px; }
+    .nl-input {
+      flex: 1;
+      padding: 13px 18px;
+      border-radius: 8px;
+      border: 1.5px solid rgba(229,222,202,0.28);
+      background: rgba(255,255,255,0.07);
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .nl-input::placeholder { color: rgba(229,222,202,0.45); }
+    .nl-input:focus { border-color: var(--cream); }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--olive-dk); padding: 64px 0 0; }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 36px;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .footer-logo-row img { height: 40px; }
+    .footer-clinic-name {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-top: 6px;
+    }
+    .footer-tagline { font-size: 14px; line-height: 1.65; color: rgba(229,222,202,0.65); margin-bottom: 18px; max-width: 260px; }
+    .footer-addr { font-size: 13px; line-height: 1.7; color: rgba(229,222,202,0.6); }
+    .footer-social { display: flex; gap: 10px; margin-top: 20px; }
+    .soc-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 9px;
+      background: rgba(229,222,202,0.09);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+      text-decoration: none;
+    }
+    .soc-btn:hover { background: rgba(229,222,202,0.18); }
+    .soc-btn:focus-visible { outline: 2px solid var(--cream); outline-offset: 2px; }
+    .soc-btn svg { width: 21px; height: 21px; color: rgba(229,222,202,0.75); }
+    .footer-col h4 {
+      font-family: 'League Spartan', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col ul li { margin-bottom: 9px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(229,222,202,0.65); transition: color 0.14s; }
+    .footer-col ul li a:hover { color: var(--cream); }
+    .hours-row { margin-bottom: 12px; }
+    .hours-day { font-size: 13px; font-weight: 700; color: var(--cream); margin-bottom: 1px; }
+    .hours-time { font-size: 13px; color: rgba(229,222,202,0.65); }
+    .footer-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'League Spartan', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 14px;
+    }
+    .footer-phone svg { width: 15px; height: 15px; }
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 56px auto 0;
+      padding: 20px 36px;
+      border-top: 1px solid rgba(229,222,202,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .footer-copy { font-size: 13px; color: rgba(229,222,202,0.42); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 13px; color: rgba(229,222,202,0.42); transition: color 0.14s; }
+    .footer-legal a:hover { color: rgba(229,222,202,0.75); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .navbar-phone-btn { display: none; }
+    }
+    @media (max-width: 900px) {
+      .navbar-nav { display: none; }
+      .burger { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; min-height: unset; }
+      .hero-left { padding: 56px 24px; }
+      .hero-right { height: 320px; }
+      .hero-right img { height: 100%; }
+      .why-inner { grid-template-columns: 1fr; gap: 40px; }
+      .why-right { order: -1; }
+      .why-img { aspect-ratio: 16/9; }
+      .usda-inner { grid-template-columns: 1fr; gap: 40px; }
+      .usda-inner > div:last-child { order: -1; }
+      .welcome-grid { grid-template-columns: 1fr; }
+      .services-head { flex-direction: column; align-items: flex-start; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .svc-card.featured { grid-column: span 2; }
+      .new-clients-inner { grid-template-columns: 1fr; }
+      .newsletter-inner { flex-direction: column; gap: 32px; }
+      .nl-form { min-width: unset; width: 100%; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 580px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .svc-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+      .svc-feat-img { height: 200px; width: 100%; min-height: unset; }
+      .team-grid { grid-template-columns: 1fr; max-width: 280px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .trust-bg { height: 520px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- ANNOUNCEMENT BAR                          -->
+<!-- ══════════════════════════════════════════ -->
+<div class="announce-bar">
+  Now Accepting New Patients &mdash; <a href="#">Book Your First Visit Today</a> &middot; Chino Hills, CA
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- NAVBAR                                    -->
+<!-- ══════════════════════════════════════════ -->
+<header class="navbar">
+  <div class="navbar-inner">
+
+    <a href="/" class="navbar-brand">
+      <div class="navbar-icon-crop"></div>
+      <div class="navbar-brand-text">
+        <span class="navbar-brand-name">Hillside Animal Clinic</span>
+        <span class="navbar-brand-loc">Chino Hills, CA</span>
+      </div>
+    </a>
+
+    <nav class="navbar-nav" aria-label="Main navigation">
+      <div class="nav-item">
+        <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">
+          About
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown">
+          <a href="#">About Us</a>
+          <a href="#">Team</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">
+          Services
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown nav-dropdown-mega">
+          <div class="mega-grid">
+            <div class="mega-col">
+              <div class="mega-col-label">General</div>
+              <a href="#">Wellness Exams</a>
+              <a href="#">Vaccinations</a>
+              <a href="#">Diagnostics &amp; Imaging</a>
+              <a href="#">Dental Care</a>
+              <a href="#">Spay &amp; Neuter</a>
+              <a href="#">Senior &amp; Chronic Condition Care</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-label">Specialty</div>
+              <a href="#">Soft Tissue Surgery</a>
+              <a href="#">Orthopedic Surgery</a>
+              <a href="#">Ultrasounds &amp; Echocardiograms</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-col-label">International</div>
+              <a href="#">USDA Travel Certificates</a>
+            </div>
+          </div>
+          <div class="mega-footer">
+            <a href="#">View all</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">
+          Clients
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown">
+          <a href="#">New Client Form</a>
+        </div>
+      </div>
+      <a href="#" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#" class="btn btn-dark">Book Appointment</a>
+
+    <a href="tel:+19095550000" class="btn btn-outline-dark navbar-phone-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-1.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (909) 555-XXXX
+    </a>
+
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- MOBILE NAV                                -->
+<!-- ══════════════════════════════════════════ -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-nav-head">
+    <a href="/" class="navbar-brand">
+      <img src="brand_assets/Hillside-Green-Logo.png" alt="" style="height:38px;" />
+      <span class="brand-name">Hillside Animal Clinic</span>
+    </a>
+    <button id="closeNav" aria-label="Close menu" style="background:none;border:none;cursor:pointer;padding:4px;display:flex;align-items:center;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#282C15" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-body">
+    <span class="mobile-group-label">About</span>
+    <a href="#" class="sub">About Us</a>
+    <a href="#" class="sub">Team</a>
+    <a href="#" class="sub">Careers</a>
+    <span class="mobile-group-label">Services — General</span>
+    <a href="#" class="sub">Wellness Exams</a>
+    <a href="#" class="sub">Vaccinations</a>
+    <a href="#" class="sub">Diagnostics &amp; Imaging</a>
+    <a href="#" class="sub">Dental Care</a>
+    <a href="#" class="sub">Spay &amp; Neuter</a>
+    <a href="#" class="sub">Senior &amp; Chronic Condition Care</a>
+    <span class="mobile-group-label">Services — Specialty</span>
+    <a href="#" class="sub">Soft Tissue Surgery</a>
+    <a href="#" class="sub">Orthopedic Surgery</a>
+    <a href="#" class="sub">Ultrasounds &amp; Echocardiograms</a>
+    <span class="mobile-group-label">Services — International</span>
+    <a href="#" class="sub">USDA Travel Certificates</a>
+    <span class="mobile-group-label">Clients</span>
+    <a href="#" class="sub">New Client Form</a>
+  </div>
+  <div class="mobile-nav-foot">
+    <a href="#" class="btn btn-olive">Book an Appointment</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- HERO (Promo Banner)                       -->
+<!-- ══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1><em>Compassionate</em> care<br>for your</h1>
+      <div class="anim-wrap">
+        <span class="anim-word">dogs and cats</span>
+        <span class="anim-word">puppies and kittens</span>
+        <span class="anim-word">senior pets</span>
+        <span class="anim-word">best friends</span>
+        <span class="anim-word">fur babies</span>
+        <span class="anim-word">family</span>
+      </div>
+      <p class="hero-sub">Welcome to Hillside Animal Clinic, your neighborhood veterinary clinic in Chino Hills, California &mdash; where pets are family. We believe every visit should feel warm, unhurried, and personal. Whether it&rsquo;s a first puppy visit or golden-year care, we&rsquo;re honored to be by your side.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-dark">Book Appointment</a>
+        <a href="tel:+19095550000" class="btn btn-outline-dark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:15px;height:15px;flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-1.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (909) XXX-XXXX
+        </a>
+      </div>
+      <div class="hero-hours-wrap">
+        <div class="hero-sunday" id="heroHoursRow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <button class="hero-inline-btn" id="heroHoursBtn"><span id="hero-hours">Loading hours…</span></button>
+        </div>
+        <div class="hours-popup" id="hoursPopup" role="dialog" aria-modal="true" aria-label="Weekly clinic hours">
+          <div class="hours-popup-head">
+            Hours
+            <button class="hours-popup-close" id="hoursPopupClose" aria-label="Close">&#x2715;</button>
+          </div>
+          <ul class="hours-list" id="hoursList"></ul>
+        </div>
+      </div>
+      <div class="hero-sunday">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <a href="https://maps.google.com/?q=3580+Grand+Ave+Ste+%23N+Chino+Hills+CA+91709" target="_blank" rel="noopener" class="hero-map-link">3580 Grand Ave, Ste #N, Chino Hills, CA 91709</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-carousel">
+        <img src="brand_assets/Hillside-Image-5.jpg" alt="Grandmother and granddaughter with dog" class="carousel-slide c-active" style="object-position: center 30%;" />
+        <img src="brand_assets/Hillside-Image-4.jpg" alt="Couple with cat" class="carousel-slide" style="object-position: center 20%;" />
+        <img src="brand_assets/Hillside-Image-6v2.jpeg" alt="Two cats" class="carousel-slide" style="object-position: center 40%;" />
+        <div class="carousel-dots">
+          <span class="carousel-dot c-active"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- WELCOME / CONTACT INFO                    -->
+<!-- ══════════════════════════════════════════ -->
+<section class="welcome-section">
+  <div class="welcome-inner">
+    <div class="welcome-grid">
+      <div class="welcome-map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.0!2d-117.7413!3d33.9801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c33a2c5e2a1e5d%3A0x0!2s3580+Grand+Ave+STE+N%2C+Chino+Hills%2C+CA+91709!5e0!3m2!1sen!2sus!4v1"
+          width="100%"
+          height="100%"
+          style="border:0; display:block; border-radius:16px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Hillside Animal Clinic location map">
+        </iframe>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-title">Contact Us</div>
+
+        <div class="contact-row">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="clabel">Address</div>
+            <div class="cvalue">3580 Grand Ave, Ste #N<br>Chino Hills, CA 91709</div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-1.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="clabel">Phone</div>
+            <div class="cvalue">(909) 555-XXXX</div>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="contact-info">
+            <div class="clabel">Hours</div>
+            <div class="cvalue">Mon&ndash;Fri: 8:30 am &ndash; 6:00 pm<br>Sat: 9:00 am &ndash; 4:00 pm<br>Sun: Closed</div>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-olive">Book an Appointment</a>
+        <a href="https://maps.google.com/?q=3580+Grand+Ave+STE+N+Chino+Hills+CA+91709" class="directions-link" target="_blank" rel="noopener">Get Directions &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- MEET THE TEAM                             -->
+<!-- ══════════════════════════════════════════ -->
+<section class="team-section">
+  <div class="team-inner">
+    <div class="team-head">
+      <div>
+        <span class="eyebrow">Our People</span>
+        <h2>Meet Your Dedicated Team</h2>
+      </div>
+    </div>
+    <div class="team-grid">
+      <div class="doc-card">
+        <img src="https://placehold.co/320x320/282C15/E5DECA" alt="Dr. Bryan H. Kim" class="doc-photo" />
+        <div class="doc-name">Dr. Bryan H. Kim</div>
+        <div class="doc-title">DVM</div>
+      </div>
+      <div class="doc-card">
+        <img src="https://placehold.co/320x320/7E9DA2/282C15" alt="Dr. Erin Park" class="doc-photo" />
+        <div class="doc-name">Dr. Erin Park</div>
+        <div class="doc-title">DVM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- WHY HILLSIDE (Accordion)                  -->
+<!-- ══════════════════════════════════════════ -->
+<section class="why-section">
+  <div class="why-inner">
+    <div>
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="why-title">Why Hillside Animal Clinic?</h2>
+
+      <div class="acc-list">
+
+        <div class="acc-item open">
+          <button class="acc-trigger" aria-expanded="true">
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v6a6 6 0 0 1-12 0V4z"/><path d="M4 8H2v1a4 4 0 0 0 4 4"/><path d="M20 8h2v1a4 4 0 0 0-4 4"/><line x1="12" y1="16" x2="12" y2="20"/><line x1="8" y1="20" x2="16" y2="20"/></svg>
+            </div>
+            <span class="acc-label">Award-Winning Veterinary Care + 22 Years of Service</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Proudly serving Chino Hills since 2005, Dr. Bryan H. Kim has been recognized by the Chino Hills community for excellence in veterinary medicine &mdash; combining compassionate care with advanced diagnostics and a team that truly listens.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+            </div>
+            <span class="acc-label">Doctor Owned + Operated</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              Hillside Animal Clinic is a doctor-owned and operated practice that combines advanced diagnostic technology with personalized care. Our veterinarians focus on the most effective and appropriate treatment options for your pet and your family&mdash;not simply the most expensive ones.
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">
+            <div class="acc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="acc-label">Tender Loving Care</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              At Hillside, your pet isn&rsquo;t just a patient &mdash; they&rsquo;re family. From the moment you walk through our doors, our team takes the time to comfort your companion, ease your worries, and make every visit feel warm and unhurried. Because when you love your pet, so do we.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="why-right">
+      <div class="why-carousel">
+        <img src="brand_assets/Hillside-Team-1.jpg" alt="Hillside Animal Clinic founding doctors" class="why-slide w-active" />
+        <img src="brand_assets/Hillside-Team-2.jpg" alt="Hillside Animal Clinic full team" class="why-slide" />
+        <img src="brand_assets/Hillside-Team-3.jpg" alt="Hillside Animal Clinic team outside clinic" class="why-slide" style="object-position: center center;" />
+        <div class="why-dots">
+          <span class="why-dot w-active"></span>
+          <span class="why-dot"></span>
+          <span class="why-dot"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- VETERINARY SERVICES                       -->
+<!-- ══════════════════════════════════════════ -->
+<section class="services-section">
+  <div class="services-inner">
+    <div class="services-head">
+      <div>
+        <span class="eyebrow">What We Offer</span>
+        <h2>Comprehensive Veterinary Services<br class="svc-title-br"> in Chino Hills, California</h2>
+        <p class="services-sub">From routine wellness visits and vaccinations to advanced surgery and international travel certificates &mdash; we offer the full spectrum of care your pet needs, all under one roof. Have any questions about our services? Give us a call today.</p>
+      </div>
+    </div>
+
+    <div class="svc-categories">
+
+      <div class="svc-category">
+        <div class="svc-cat-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          General Care
+        </div>
+        <div class="svc-cat-grid">
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Wellness Exams</h3>
+            <p>Annual and bi-annual exams to keep your pet healthy at every life stage, from puppy to senior.</p>
+          </div>
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(45 12 12)"><path d="M12 2v4"/><path d="M8.5 6h7"/><rect x="9" y="6" width="6" height="12" rx="1.5"/><path d="M12 18v4"/><path d="M9 10h6"/><path d="M9 14h6"/></g></svg>
+            </div>
+            <h3>Vaccinations</h3>
+            <p>Core and lifestyle vaccines tailored to your pet's age, health, and environment.</p>
+          </div>
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></svg>
+            </div>
+            <h3>Diagnostics &amp; Imaging</h3>
+            <p>In-house bloodwork, urinalysis, digital X-ray, and ultrasound for fast, accurate results.</p>
+          </div>
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(12 12) scale(1.2) translate(-12 -12)"><path d="M12 3c-2.2 0-4 1.3-4 3.2 0 1 .3 1.8.3 3 0 3 .7 7.8 2 7.8.9 0 1-2.3 1-3.3s.1-1.7.7-1.7.7.7.7 1.7-.1 3.3 1 3.3c1.3 0 2-4.8 2-7.8 0-1.2.3-2 .3-3C16 4.3 14.2 3 12 3z"/></g></svg>
+            </div>
+            <h3>Dental Care</h3>
+            <p>Professional cleanings, extractions, and oral assessments to prevent dental disease.</p>
+          </div>
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="6.5" r="1.6"/><circle cx="15.5" cy="6.5" r="1.6"/><circle cx="5.5" cy="11.5" r="1.6"/><circle cx="18.5" cy="11.5" r="1.6"/><path d="M12 12c-2.5 0-4.5 2-4.5 4.2 0 1.6 1.2 2.8 2.7 2.8.8 0 1.3-.4 1.8-.4s1 .4 1.8.4c1.5 0 2.7-1.2 2.7-2.8C16.5 14 14.5 12 12 12z"/></svg>
+            </div>
+            <h3>Spay &amp; Neuter</h3>
+            <p>Safe, routine procedures with attentive pre- and post-operative care.</p>
+          </div>
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Senior &amp; Chronic Condition Care</h3>
+            <p>Ongoing monitoring and management for aging pets and those living with conditions like arthritis, diabetes, or kidney disease.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-category">
+        <div class="svc-cat-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Specialty &amp; Surgery
+        </div>
+        <div class="svc-cat-grid">
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 3h15M4.5 21h15M4.5 12h15M12 3v18"/></svg>
+            </div>
+            <h3>Soft Tissue Surgery</h3>
+            <p>Routine to complex soft-tissue procedures performed in a sterile, monitored surgical suite.</p>
+          </div>
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(45 12 12)"><rect x="6" y="10" width="12" height="4" rx="2"/><circle cx="6" cy="9.5" r="2.4"/><circle cx="6" cy="14.5" r="2.4"/><circle cx="18" cy="9.5" r="2.4"/><circle cx="18" cy="14.5" r="2.4"/></g></svg>
+            </div>
+            <h3>Orthopedic Surgery</h3>
+            <p>Fracture repair, ligament, and joint procedures to help restore mobility and comfort.</p>
+          </div>
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(0 4)"><path d="M2 12a10 10 0 0 1 20 0"/><path d="M6 12a6 6 0 0 1 12 0"/><circle cx="12" cy="12" r="2"/></g></svg>
+            </div>
+            <h3>Ultrasounds &amp; Echocardiograms</h3>
+            <p>In-house ultrasound and cardiac imaging for accurate diagnosis of internal and heart conditions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-category">
+        <div class="svc-cat-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          International
+        </div>
+        <div class="svc-cat-grid">
+          <div class="svc-card" tabindex="0">
+            <div class="svc-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>USDA Travel Certificates</h3>
+            <p>USDA-accredited health certificates for international pet travel, handled end-to-end.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- USDA / TRAVEL CERTIFICATES                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="usda-section">
+  <div class="usda-inner">
+    <div class="usda-text">
+      <span class="eyebrow">International Travel</span>
+      <h2>USDA Pet Health Certification for Travel</h2>
+      <p>Planning to travel internationally with your pet? Our clinic is a USDA-accredited facility that issues official health certificates accepted worldwide. We guide you through every step &mdash; required vaccines, health assessments, and all country-specific documentation &mdash; so the process is seamless.</p>
+      <a href="#" class="btn btn-dark">Learn About Travel Certificates</a>
+    </div>
+    <div>
+      <img src="brand_assets/Hillside-Image-7.jpg" alt="Dog relaxing on a flight, ready for travel" class="usda-img" />
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- NEW CLIENTS CTA                           -->
+<!-- ══════════════════════════════════════════ -->
+<section class="new-clients">
+  <div class="new-clients-inner">
+    <div class="nc-img-wrap">
+      <img src="brand_assets/Hillside-Image-8.jpg" alt="Cat showing off healthy teeth" class="nc-img" />
+    </div>
+    <div class="nc-text">
+      <span class="eyebrow eyebrow-light">Dental Special</span>
+      <h2>25% Off Dental Cleanings</h2>
+      <p>Healthy teeth mean a healthier pet. For a limited time, save 25% on professional dental cleanings &mdash; helping prevent pain, infection, and costly issues down the road.</p>
+      <a href="#" class="btn btn-cream">Claim 25% Off</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- NEWSLETTER                                -->
+<!-- ══════════════════════════════════════════ -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <div class="nl-text">
+      <h2>Stay Connected with Hillside</h2>
+      <p>Pet health tips, seasonal offers, and clinic updates delivered to your inbox.</p>
+    </div>
+    <form class="nl-form" onsubmit="return false;" aria-label="Newsletter signup">
+      <input type="email" class="nl-input" placeholder="Enter your email address" aria-label="Email address" />
+      <button type="submit" class="btn btn-olive">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- FOOTER                                    -->
+<!-- ══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+
+    <div>
+      <div class="footer-logo-row">
+        <img src="brand_assets/Hillside-Transparent-Logo.png" alt="Hillside Animal Clinic" />
+        <span class="footer-clinic-name">Hillside Animal Clinic</span>
+      </div>
+      <p class="footer-tagline">Healing every paw, whisker, and tail with compassion &mdash; proudly serving Chino Hills since 2010.</p>
+      <p class="footer-addr">3580 Grand Ave, Ste #N<br>Chino Hills, CA 91709</p>
+      <div class="footer-social">
+        <a href="#" class="soc-btn" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="soc-btn" aria-label="Google">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" aria-label="Yelp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="m7.6885 15.1415-3.6715.8483c-.3769.0871-.755.183-1.1452.155-.2611-.0188-.5122-.0414-.7606-.213a1.179 1.179 0 0 1-.331-.3594c-.3486-.5519-.3656-1.3661-.3697-2.0004a6.2874 6.2874 0 0 1 .3314-2.0642 1.857 1.857 0 0 1 .1073-.2474 2.3426 2.3426 0 0 1 .1255-.2165 2.4572 2.4572 0 0 1 .1563-.1975 1.1736 1.1736 0 0 1 .399-.2831 1.082 1.082 0 0 1 .4592-.0837c.2355.0016.5139.052.91.1734.0555.0191.1237.0382.1856.0572.3277.1013.7048.2404 1.1499.3987.6863.2404 1.3663.487 2.0463.7397l1.2117.4423c.2217.0807.4363.18.6412.297.174.0984.3273.2298.4512.387a1.217 1.217 0 0 1 .192.4309 1.2205 1.2205 0 0 1-.872 1.4522c-.0468.0151-.0852.0239-.1085.0293l-1.105.2553-.0031-.001zM18.8208 7.565a1.8506 1.8506 0 0 0-.2042-.1754 2.4082 2.4082 0 0 0-.2077-.1394 2.3607 2.3607 0 0 0-.2269-.109 1.1705 1.1705 0 0 0-.482-.0796 1.0862 1.0862 0 0 0-.4498.1263c-.2107.1048-.4388.2732-.742.5551-.042.0417-.0947.0886-.142.133-.2502.2351-.5286.5252-.8599.863a114.6363 114.6363 0 0 0-1.5166 1.5629l-.8962.9293a4.1897 4.1897 0 0 0-.4466.5483 1.541 1.541 0 0 0-.2364.5459 1.2199 1.2199 0 0 0 .0107.4518l.0046.02a1.218 1.218 0 0 0 1.4184.923 1.162 1.162 0 0 0 .1105-.0213l4.7781-1.104c.3766-.087.7587-.1667 1.097-.3631.2269-.1316.4428-.262.5909-.5252a1.1793 1.1793 0 0 0 .1405-.4683c.0733-.6512-.2668-1.3908-.5403-1.963a6.2792 6.2792 0 0 0-1.2001-1.7103zM8.9703.0754a8.6724 8.6724 0 0 0-.83.1564c-.2754.066-.548.1383-.8146.2236-.868.2844-2.0884.8063-2.295 1.8065-.1165.5655.1595 1.1439.3737 1.66.2595.6254.614 1.1889.9373 1.7777.8543 1.5545 1.7245 3.0993 2.5922 4.6457.259.4617.5416 1.0464 1.043 1.2856a1.058 1.058 0 0 0 .1013.0383c.2248.0851.4699.1016.7041.0471a4.3015 4.3015 0 0 0 .0418-.0097 1.2136 1.2136 0 0 0 .5658-.3397 1.1033 1.1033 0 0 0 .079-.0822c.3463-.435.3454-1.0833.3764-1.6134.1042-1.771.2139-3.5423.3009-5.3142.0332-.6712.1055-1.3333.0655-2.0096-.0328-.5579-.0368-1.1984-.3891-1.6563-.6218-.8073-1.9476-.741-2.8523-.6158zm2.084 15.9505a1.1053 1.1053 0 0 0-1.2306-.4145 1.1398 1.1398 0 0 0-.1526.0633 1.4806 1.4806 0 0 0-.2171.1354c-.1992.1475-.3668.3392-.5196.5315-.0386.049-.074.1143-.12.1562l-.7686 1.0573a113.9168 113.9168 0 0 0-1.2913 1.789c-.278.3895-.5184.7184-.7083 1.0094-.036.0547-.0734.116-.1075.1647-.2277.3522-.3566.6092-.4228.8381a1.0945 1.0945 0 0 0-.046.4721c.0211.1655.0768.3246.1635.467.046.0715.0957.1406.1487.207a2.334 2.334 0 0 0 .1754.1825 1.843 1.843 0 0 0 .2108.1732c.5304.369 1.1112.6342 1.722.8391a6.0958 6.0958 0 0 0 1.5716.3004c.091.0046.1821.0025.2728-.006a2.3878 2.3878 0 0 0 .2506-.0351 2.3862 2.3862 0 0 0 .2447-.071 1.1927 1.1927 0 0 0 .4175-.2658c.1127-.113.1994-.249.2541-.3989.0889-.2214.1473-.5026.1857-.92.0034-.0593.0118-.1305.0177-.1958.0304-.3463.0443-.7531.0666-1.2315.0375-.7357.067-1.4681.0903-2.2026 0 0 .0495-1.3053.0494-1.306.0113-.3008.002-.6342-.0814-.9336a1.396 1.396 0 0 0-.1756-.4054zm8.6754 2.0439c-.1605-.176-.3878-.3514-.7462-.5682-.0518-.0288-.1124-.0674-.1684-.1009-.2985-.1795-.658-.3684-1.078-.5965a120.7615 120.7615 0 0 0-1.9427-1.042l-1.1515-.6107c-.0597-.0175-.1203-.0607-.1766-.0878-.2212-.1058-.4558-.2045-.6992-.2498a1.4915 1.4915 0 0 0-.2545-.0265 1.1527 1.1527 0 0 0-.1648.01 1.1077 1.1077 0 0 0-.9227.9133 1.4186 1.4186 0 0 0 .0159.439c.0563.3065.1932.6096.3346.875l.615 1.1526c.3422.65.6884 1.2963 1.0435 1.9406.229.4202.4196.7799.5982 1.078.0338.056.0721.1163.1011.1682.2173.3584.392.584.569.7458.1146.1107.252.195.4026.247.1583.0525.326.071.4919.0546a2.368 2.368 0 0 0 .251-.0435c.0817-.022.1622-.048.241-.0784a1.863 1.863 0 0 0 .2475-.1143 6.1018 6.1018 0 0 0 1.2818-.9597c.4596-.4522.8659-.9454 1.182-1.51.044-.08.0819-.163.1138-.2483a2.49 2.49 0 0 0 .0773-.2411c.0186-.083.033-.1669.0429-.2513a1.188 1.188 0 0 0-.0565-.491 1.0933 1.0933 0 0 0-.248-.4041zm2.86 3.742a.8523.8523 0 0 1-.111.4236c-.074.132-.178.2377-.3115.3172a.8428.8428 0 0 1-.4385.119.847.847 0 0 1-.4373-.1179.8526.8526 0 0 1-.3125-.3171.8548.8548 0 0 1-.111-.4248c0-.1526.038-.2958.1143-.4294a.8405.8405 0 0 1 .315-.3159.849.849 0 0 1 .4315-.1156.8514.8514 0 0 1 .4294.1144.84.84 0 0 1 .316.3148.8494.8494 0 0 1 .1156.4317zm-.1202 0c0-.1328-.0332-.256-.0996-.3698s-.1564-.2038-.2702-.2702a.7125.7125 0 0 0-.371-.1007.7204.7204 0 0 0-.3698.0996.7487.7487 0 0 0-.2713.2702.7181.7181 0 0 0-.0996.3709c0 .132.0332.2557.0996.371a.7355.7355 0 0 0 .2713.2713.7354.7354 0 0 0 .3698.0985.7205.7205 0 0 0 .3698-.0996.7423.7423 0 0 0 .2702-.2691.7186.7186 0 0 0 .1008-.3721zm-.577.0584.2724.4522h-.1922l-.237-.4052h-.1546v.4052h-.1695v-1.02h.2988c.1268 0 .2195.0247.2783.0744.0595.0496.0892.1252.0892.2267a.2785.2785 0 0 1-.0492.1625c-.032.0466-.0775.0813-.1362.1042zm-.0412-.1408a.1532.1532 0 0 0 .056-.1214c0-.0573-.0164-.0981-.0491-.1225-.0329-.0251-.0847-.0377-.1557-.0377h-.1214v.3285h.1237c.061 0 .1098-.0157.1465-.047z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <div class="hours-row">
+        <div class="hours-day">Mon &ndash; Fri</div>
+        <div class="hours-time">8:30 am &ndash; 6:00 pm</div>
+      </div>
+      <div class="hours-row">
+        <div class="hours-day">Saturday</div>
+        <div class="hours-time">9:00 am &ndash; 4:00 pm</div>
+      </div>
+      <div class="hours-row">
+        <div class="hours-day">Sunday</div>
+        <div class="hours-time">Closed</div>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="footer-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-1.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (909) 555-XXXX
+      </div>
+      <ul>
+        <li><a href="#">Book an Appointment</a></li>
+        <li><a href="#">New Client Form</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 Hillside Animal Clinic. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ─── ANIMATED WORD CYCLE ───
+  (function () {
+    const words = document.querySelectorAll('.anim-word');
+    if (!words.length) return;
+    let idx = 0;
+    words[0].classList.add('anim-current');
+    setInterval(() => {
+      const prev = idx;
+      idx = (idx + 1) % words.length;
+      words[prev].classList.remove('anim-current');
+      words[prev].classList.add('anim-exit');
+      setTimeout(() => words[prev].classList.remove('anim-exit'), 450);
+      words[idx].classList.add('anim-current');
+    }, 2400);
+  })();
+
+  // ─── ACCORDION ───
+  document.querySelectorAll('.acc-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.acc-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.acc-trigger').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ─── MOBILE NAV ───
+  const burgerBtn = document.getElementById('burgerBtn');
+  const closeNavBtn = document.getElementById('closeNav');
+  const mobileNav = document.getElementById('mobileNav');
+
+  function openNav() {
+    mobileNav.classList.add('open');
+    burgerBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeNav() {
+    mobileNav.classList.remove('open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  burgerBtn.addEventListener('click', openNav);
+  closeNavBtn.addEventListener('click', closeNav);
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+  window.addEventListener('resize', () => { if (window.innerWidth > 900) closeNav(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+  // ─── HERO CAROUSEL ───
+  (function () {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    if (!slides.length) return;
+    let cur = 0;
+    function goTo(n) {
+      slides[cur].classList.remove('c-active');
+      dots[cur].classList.remove('c-active');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('c-active');
+      dots[cur].classList.add('c-active');
+    }
+    dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); goTo(i); timer = setInterval(() => goTo(cur + 1), 4500); }));
+    let timer = setInterval(() => goTo(cur + 1), 4500);
+  })();
+
+  // ─── WHY CAROUSEL ───
+  (function () {
+    const slides = document.querySelectorAll('.why-slide');
+    const dots = document.querySelectorAll('.why-dot');
+    if (!slides.length) return;
+    let cur = 0;
+    function goTo(n) {
+      slides[cur].classList.remove('w-active');
+      dots[cur].classList.remove('w-active');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('w-active');
+      dots[cur].classList.add('w-active');
+    }
+    dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); goTo(i); timer = setInterval(() => goTo(cur + 1), 5000); }));
+    let timer = setInterval(() => goTo(cur + 1), 5000);
+  })();
+
+</script>
+
+<script>
+  (function () {
+    const HOURS = [
+      { day: 'Sunday',    open: null,       close: null },
+      { day: 'Monday',    open: '8:30 AM',  close: '6:00 PM' },
+      { day: 'Tuesday',   open: '8:30 AM',  close: '6:00 PM' },
+      { day: 'Wednesday', open: '8:30 AM',  close: '6:00 PM' },
+      { day: 'Thursday',  open: '8:30 AM',  close: '6:00 PM' },
+      { day: 'Friday',    open: '8:30 AM',  close: '6:00 PM' },
+      { day: 'Saturday',  open: '9:00 AM',  close: '4:00 PM' },
+    ];
+
+    function toMinutes(str) {
+      var parts = str.split(' '), time = parts[0].split(':');
+      var h = parseInt(time[0]), m = parseInt(time[1]), ampm = parts[1];
+      if (ampm === 'PM' && h !== 12) h += 12;
+      if (ampm === 'AM' && h === 12) h = 0;
+      return h * 60 + m;
+    }
+
+    function nextOpenDay(fromIdx) {
+      for (var i = 1; i <= 7; i++) {
+        var d = HOURS[(fromIdx + i) % 7];
+        if (d.open) return d;
+      }
+      return null;
+    }
+
+    var now = new Date();
+    var todayIdx = now.getDay();
+    var todayData = HOURS[todayIdx];
+    var currentMin = now.getHours() * 60 + now.getMinutes();
+
+    var statusHTML;
+    if (!todayData.open) {
+      statusHTML = todayData.day + ': <span class="hours-status-closed">Closed</span>';
+    } else {
+      var openMin  = toMinutes(todayData.open);
+      var closeMin = toMinutes(todayData.close);
+      if (currentMin >= openMin && currentMin < closeMin) {
+        statusHTML = '<span class="hours-status-open">Open</span> until ' + todayData.close;
+      } else if (currentMin < openMin) {
+        statusHTML = '<span class="hours-status-closed">Closed</span> · Opens ' + todayData.open;
+      } else {
+        var next = nextOpenDay(todayIdx);
+        statusHTML = '<span class="hours-status-closed">Closed</span> · Opens ' + next.day + ' ' + next.open;
+      }
+    }
+
+    var hoursSpan = document.getElementById('hero-hours');
+    if (hoursSpan) hoursSpan.innerHTML = statusHTML;
+
+    // Build hours list
+    var list = document.getElementById('hoursList');
+    HOURS.forEach(function (h, i) {
+      var li = document.createElement('li');
+      if (i === todayIdx) li.classList.add('today');
+      var timeStr = h.open ? h.open + ' – ' + h.close : 'Closed';
+      li.innerHTML = '<span class="h-day">' + h.day + '</span><span class="h-time">' + timeStr + '</span>';
+      list.appendChild(li);
+    });
+
+    // Popup open / close
+    var btn      = document.getElementById('heroHoursBtn');
+    var popup    = document.getElementById('hoursPopup');
+    var closeBtn = document.getElementById('hoursPopupClose');
+
+    function openPopup()  { popup.classList.add('open'); }
+    function closePopup() { popup.classList.remove('open'); }
+
+    btn.addEventListener('click', function (e) { e.stopPropagation(); popup.classList.toggle('open'); });
+    closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closePopup(); });
+    document.addEventListener('click', function (e) {
+      if (popup.classList.contains('open') && !popup.contains(e.target)) closePopup();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePopup(); });
+  })();
+</script>
+
+</body>
+</html>
