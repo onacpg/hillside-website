@@ -776,8 +776,22 @@
       .navbar-phone-btn { display: none; }
     }
     @media (max-width: 900px) {
+      .navbar { position: static; }
       .navbar-nav { display: none; }
-      .burger { display: flex; }
+      .burger {
+        display: flex;
+        position: fixed;
+        top: 21px;
+        right: 60px;
+        z-index: 150;
+        width: 46px;
+        height: 46px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(40,44,21,0.18);
+      }
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
       .why-right { order: -1; }
       .footer-bottom { flex-direction: column; text-align: center; }
@@ -791,6 +805,7 @@
       .navbar-brand-name { font-size: 15px; letter-spacing: 0.04em; }
       .navbar-brand-loc { font-size: 10px; }
       .navbar-inner > .btn-preregister { display: none; }
+      .burger { right: 16px; }
     }
   </style>
 </head>
@@ -955,7 +970,7 @@
       <div class="doctor-bio-content">
         <h3>Dr. Bryan H. Kim, DVM</h3>
         <p>Opening Hillside Animal Clinic marks a return to the community he loves and the fulfillment of a dream that began when he was just 12 years old: to dedicate his life to helping animals and the people who love them.</p>
-        <p>Dr. Kim began his veterinary education at Konkuk University in Seoul, Korea, then moved to the United States for broader clinical training. He completed an intensive postgraduate small animal program at the Schwarzman Animal Medical Center in New York City, followed by clinical rotations at the University of Missouri Veterinary Teaching Hospital. After earning his California veterinary license in 1998, he practiced in Hollywood before founding TLC Animal Clinic in Chino Hills in 2004, where he served as a trusted family veterinarian for 20 years.</p>
+        <p>Dr. Kim began his veterinary education at Konkuk University in Seoul, Korea, then moved to the United States for broader clinical training. He completed an intensive postgraduate small animal program at the Schwarzman Animal Medical Center in New York City, followed by clinical rotations at the University of Missouri Veterinary Teaching Hospital. After earning his California veterinary license in 1998, he practiced in Hollywood before founding an Animal Clinic in Chino Hills in 2004, where he served as a trusted family veterinarian for 20 years.</p>
         <p>In 2021, Dr. Kim entered semi-retirement, balancing practice with teaching as a visiting professor at Konkuk University. Now he returns to Hillside Animal Clinic, where compassionate, personalized care and lasting client relationships remain at the heart of everything he does.</p>
         <p>Dr. Kim is married with two children and shares his home with three beloved dogs&mdash;Bella, Beau, and Kome. Outside the clinic, he enjoys world history and golf.</p>
       </div>

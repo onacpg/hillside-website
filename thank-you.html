@@ -622,8 +622,22 @@
       .navbar-phone-btn { display: none; }
     }
     @media (max-width: 900px) {
+      .navbar { position: static; }
       .navbar-nav { display: none; }
-      .burger { display: flex; }
+      .burger {
+        display: flex;
+        position: fixed;
+        top: 21px;
+        right: 60px;
+        z-index: 150;
+        width: 46px;
+        height: 46px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(40,44,21,0.18);
+      }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
     @media (max-width: 580px) {
@@ -636,6 +650,7 @@
       .navbar-brand-name { font-size: 15px; letter-spacing: 0.04em; }
       .navbar-brand-loc { font-size: 10px; }
       .navbar-inner > .btn-preregister { display: none; }
+      .burger { right: 16px; }
     }
   </style>
 </head>
