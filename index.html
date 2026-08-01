@@ -1327,10 +1327,24 @@
       .navbar-phone-btn { display: none; }
     }
     @media (max-width: 900px) {
+      .navbar { position: static; }
       .navbar-nav { display: none; }
-      .burger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; min-height: unset; }
-      .hero-left { padding: 56px 24px; }
+      .burger {
+        display: flex;
+        position: fixed;
+        top: 21px;
+        right: 60px;
+        z-index: 150;
+        width: 46px;
+        height: 46px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(40,44,21,0.18);
+      }
+      .hero-inner { grid-template-columns: 1fr; min-height: unset; padding: 0 24px; }
+      .hero-left { padding: 56px 0; }
       .hero-right { height: 320px; }
       .hero-right img { height: 100%; }
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -1340,17 +1354,14 @@
       .usda-inner > div:last-child { order: -1; }
       .welcome-grid { grid-template-columns: 1fr; }
       .services-head { flex-direction: column; align-items: flex-start; }
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .svc-card.featured { grid-column: span 2; }
+      .svc-cat-grid { grid-template-columns: repeat(2, 1fr); }
       .new-clients-inner { grid-template-columns: 1fr; }
       .newsletter-inner { flex-direction: column; gap: 32px; }
       .nl-form { min-width: unset; width: 100%; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
     @media (max-width: 580px) {
-      .services-grid { grid-template-columns: 1fr; }
-      .svc-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
-      .svc-feat-img { height: 200px; width: 100%; min-height: unset; }
+      .svc-cat-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; max-width: 280px; }
       .footer-inner { flex-direction: column; }
       .trust-bg { height: 520px; }
@@ -1361,6 +1372,7 @@
       .navbar-brand-name { font-size: 15px; letter-spacing: 0.04em; }
       .navbar-brand-loc { font-size: 10px; }
       .navbar-inner > .btn-preregister { display: none; }
+      .burger { right: 16px; }
     }
   </style>
 </head>
