@@ -6,6 +6,15 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PORT = 3000;
 
+const REDIRECTS = {};
+try {
+  const rules = fs.readFileSync(path.join(ROOT, '_redirects'), 'utf8');
+  for (const line of rules.split('\n')) {
+    const [from, to] = line.trim().split(/\s+/);
+    if (from && to) REDIRECTS[from] = to;
+  }
+} catch {}
+
 const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.css':  'text/css',
@@ -27,6 +36,7 @@ const MIME = {
 http.createServer((req, res) => {
   let url = decodeURIComponent(req.url.split('?')[0]);
   if (url === '/') url = '/index.html';
+  if (REDIRECTS[url]) url = REDIRECTS[url];
 
   const filePath = path.join(ROOT, url);
   const ext = path.extname(filePath).toLowerCase();
