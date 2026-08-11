@@ -595,7 +595,8 @@
     .hero-carousel {
       position: relative;
       width: 100%;
-      height: 480px;
+      height: auto;
+      aspect-ratio: 1650 / 1770;
       border-radius: 20px;
       overflow: hidden;
       background: var(--forest);
@@ -1395,9 +1396,6 @@
       }
       .hero-inner { grid-template-columns: 1fr; min-height: unset; padding: 0 24px; }
       .hero-left { padding: 56px 0; }
-      .hero-right { height: 320px; }
-      .hero-carousel { height: 100%; }
-      .hero-right img { height: 100%; }
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
       .why-right { order: -1; }
       .why-img { aspect-ratio: 16/9; }
@@ -1424,8 +1422,6 @@
       .navbar-brand-loc { font-size: 10px; }
       .navbar-inner > .btn-preregister { display: none; }
       .burger { right: 16px; }
-      .hero-right { height: auto; }
-      .hero-carousel { height: auto; aspect-ratio: 1650 / 1770; }
     }
   </style>
 </head>
