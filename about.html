@@ -41,8 +41,8 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 33.9801,
-      "longitude": -117.7413
+      "latitude": 34.0038963,
+      "longitude": -117.7281566
     },
     "openingHoursSpecification": [
       {
@@ -58,7 +58,7 @@
         "closes": "16:00"
       }
     ],
-    "sameAs": ["https://www.instagram.com/hillsidevets/"],
+    "sameAs": ["https://www.instagram.com/hillsidevets/", "https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6"],
     "foundingDate": "2026-10",
     "areaServed": "Chino Hills, CA"
   }
@@ -221,6 +221,7 @@
       font-family: 'TT Hoves', sans-serif;
       font-size: 13px;
       letter-spacing: 0.03em;
+      position: relative;
     }
     .announce-bar a {
       color: var(--cream);
@@ -229,6 +230,18 @@
       text-underline-offset: 2px;
     }
     .announce-bar a:hover { opacity: 0.85; }
+    .announce-ig {
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      transform: translateY(-50%);
+      display: inline-flex;
+      color: #fff;
+      opacity: 0.85;
+      line-height: 0;
+    }
+    .announce-ig svg { width: 26px; height: 26px; display: block; }
+    .announce-ig:hover { opacity: 1; }
     .asterisk-tip {
       position: relative;
       cursor: help;
@@ -853,6 +866,7 @@
       .navbar-brand-loc { font-size: 10px; }
       .navbar-inner > .btn-preregister { display: none; }
       .burger { right: 16px; }
+      .announce-ig { right: 16px; }
     }
   </style>
 </head>
@@ -863,6 +877,10 @@
 <!-- ══════════════════════════════════════════ -->
 <div class="announce-bar">
   <strong>Grand Opening Promos!</strong> &middot; 10% Lifetime<span class="asterisk-tip" tabindex="0">*<span class="tip-box">10% off for your first 10 years as a client.</span></span> Discount &middot; 25% Off Dental Cleaning &middot; 25% Off Wellness Lab Test &mdash; <a href="/pre-register">Pre-Register Now</a>
+  <a href="https://www.instagram.com/hillsidevets/" target="_blank" rel="noopener noreferrer" class="announce-ig" aria-label="Follow Hillside Animal Clinic on Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  </a>
+
 </div>
 
 <!-- ══════════════════════════════════════════ -->

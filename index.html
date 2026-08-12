@@ -41,8 +41,8 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 33.9801,
-      "longitude": -117.7413
+      "latitude": 34.0038963,
+      "longitude": -117.7281566
     },
     "openingHoursSpecification": [
       {
@@ -58,7 +58,7 @@
         "closes": "16:00"
       }
     ],
-    "sameAs": ["https://www.instagram.com/hillsidevets/"],
+    "sameAs": ["https://www.instagram.com/hillsidevets/", "https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6"],
     "foundingDate": "2026-10",
     "areaServed": "Chino Hills, CA"
   }
@@ -243,6 +243,7 @@
       font-family: 'TT Hoves', sans-serif;
       font-size: 13px;
       letter-spacing: 0.03em;
+      position: relative;
     }
     .announce-bar a {
       color: var(--cream);
@@ -251,6 +252,18 @@
       text-underline-offset: 2px;
     }
     .announce-bar a:hover { opacity: 0.85; }
+    .announce-ig {
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      transform: translateY(-50%);
+      display: inline-flex;
+      color: #fff;
+      opacity: 0.85;
+      line-height: 0;
+    }
+    .announce-ig svg { width: 26px; height: 26px; display: block; }
+    .announce-ig:hover { opacity: 1; }
     .asterisk-tip {
       position: relative;
       cursor: help;
@@ -1422,6 +1435,7 @@
       .navbar-brand-loc { font-size: 10px; }
       .navbar-inner > .btn-preregister { display: none; }
       .burger { right: 16px; }
+      .announce-ig { right: 16px; }
     }
   </style>
 </head>
@@ -1432,6 +1446,10 @@
 <!-- ══════════════════════════════════════════ -->
 <div class="announce-bar">
   <strong>Grand Opening Promos!</strong> &middot; 10% Lifetime<span class="asterisk-tip" tabindex="0">*<span class="tip-box">10% off for your first 10 years as a client.</span></span> Discount &middot; 25% Off Dental Cleaning &middot; 25% Off Wellness Lab Test &mdash; <a href="/pre-register">Pre-Register Now</a>
+  <a href="https://www.instagram.com/hillsidevets/" target="_blank" rel="noopener noreferrer" class="announce-ig" aria-label="Follow Hillside Animal Clinic on Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  </a>
+
 </div>
 
 <!-- ══════════════════════════════════════════ -->
@@ -1604,7 +1622,7 @@
       -->
       <div class="hero-sunday">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <a href="https://maps.google.com/?q=3580+Grand+Ave+Ste+%23N+Chino+Hills+CA+91709" target="_blank" rel="noopener" class="hero-map-link">3580 Grand Ave, Ste #N, Chino Hills, CA 91709 (Behind Sprouts Market)</a>
+        <a href="https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6" target="_blank" rel="noopener" class="hero-map-link">3580 Grand Ave, Ste #N, Chino Hills, CA 91709 (Behind Sprouts Market)</a>
       </div>
     </div>
     <div class="hero-right">
@@ -1623,7 +1641,7 @@
     <div class="welcome-grid">
       <div class="welcome-map-wrap">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.0!2d-117.7413!3d33.9801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c33a2c5e2a1e5d%3A0x0!2s3580+Grand+Ave+STE+N%2C+Chino+Hills%2C+CA+91709!5e0!3m2!1sen!2sus!4v1"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.0!2d-117.7281566!3d34.0038963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c33344ad079bd5%3A0x3bed72068e017b34!2sHillside+Animal+Clinic!5e0!3m2!1sen!2sus!4v1"
           width="100%"
           height="100%"
           style="border:0; display:block; border-radius:16px;"
@@ -1670,7 +1688,7 @@
 
         <!-- PRE-LAUNCH MODE: restore "Book Appointment" label when the clinic opens -->
         <a href="/pre-register" class="btn btn-olive">Pre-Register Now</a>
-        <a href="https://maps.google.com/?q=3580+Grand+Ave+STE+N+Chino+Hills+CA+91709" class="directions-link" target="_blank" rel="noopener">Get Directions &rarr;</a>
+        <a href="https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6" class="directions-link" target="_blank" rel="noopener">Get Directions &rarr;</a>
       </div>
     </div>
   </div>
