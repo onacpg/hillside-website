@@ -1127,7 +1127,7 @@
       margin: 0;
     }
     @media (max-width: 900px) {
-      .services-callout { max-width: none; }
+      .services-callout { display: none; }
     }
     /* category sections */
     .svc-categories { display: flex; flex-direction: column; gap: 40px; }
@@ -1378,8 +1378,12 @@
         box-shadow: 0 2px 12px rgba(40,44,21,0.18);
       }
       .hero-inner { grid-template-columns: 1fr; min-height: unset; padding: 0 24px; }
-      .hero-left { padding: 40px 0 16px; }
-      .hero-right { padding: 8px 0 40px; }
+      .hero-left { padding: 40px 0 8px; }
+      .hero-right { padding: 4px 0 24px; }
+      .hero h1 { font-size: clamp(26px, 8vw, 36px); }
+      .anim-wrap { height: calc(clamp(20px, 6.5vw, 32px) * 1.25); }
+      .anim-word { font-size: clamp(20px, 6.5vw, 32px); }
+      .welcome-section { padding-top: 32px; }
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
       .why-right { order: -1; }
       .why-img { aspect-ratio: 16/9; }
@@ -1587,7 +1591,7 @@
       </div>
       <div class="hero-sunday">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        <a href="https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6" target="_blank" rel="noopener" class="hero-map-link">3580 Grand Ave, Ste #N, Chino Hills, CA 91709 (Behind Sprouts Market)</a>
+        <a href="https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6" target="_blank" rel="noopener" class="hero-map-link" id="heroMapLink">3580 Grand Ave, Ste #N, Chino Hills, CA 91709 (Behind Sprouts Market)</a>
       </div>
     </div>
     <div class="hero-right">
@@ -1652,7 +1656,7 @@
         <a href="https://petcare.vettersoftware.com/new-visit?vetId=V2dyNU4yc1VtK2JDSzdVSmVkMGVnR1JLMHpyY3ZhNGROdTIyeVBsSzlOVT06OmAMI5dzqvOxpWDNxYEtARs" target="_blank" rel="noopener noreferrer" class="btn btn-book">
           Book Your Pet&rsquo;s Visit <span aria-hidden="true">&rarr;</span>
         </a>
-        <a href="https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6" class="directions-link" target="_blank" rel="noopener">Get Directions &rarr;</a>
+        <a href="https://maps.app.goo.gl/SjZB1VtJ6KoAFHVe6" class="directions-link" target="_blank" rel="noopener" id="directionsLink">Get Directions &rarr;</a>
       </div>
     </div>
   </div>
@@ -2062,6 +2066,18 @@
     }
     dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); goTo(i); timer = setInterval(() => goTo(cur + 1), 5000); }));
     let timer = setInterval(() => goTo(cur + 1), 5000);
+  })();
+
+  // ─── APPLE MAPS ON iOS/macOS ───
+  (function () {
+    const isApple = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (!isApple) return;
+    const appleMapsUrl = 'https://maps.apple.com/?q=Hillside+Animal+Clinic&address=3580+Grand+Ave,+Chino+Hills,+CA+91709';
+    ['heroMapLink', 'directionsLink'].forEach(function (id) {
+      const el = document.getElementById(id);
+      if (el) el.href = appleMapsUrl;
+    });
   })();
 
 </script>
