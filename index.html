@@ -817,7 +817,7 @@
       color: var(--forest);
       -webkit-text-stroke: 0.4px currentColor;
     }
-    .btn-hero-match { font-size: 16px; }
+    .btn-hero-match { font-size: 16px; white-space: normal; text-align: center; }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-start; align-items: center; }
 
     /* ─── WHY HILLSIDE ─── */
@@ -1378,7 +1378,8 @@
         box-shadow: 0 2px 12px rgba(40,44,21,0.18);
       }
       .hero-inner { grid-template-columns: 1fr; min-height: unset; padding: 0 24px; }
-      .hero-left { padding: 56px 0; }
+      .hero-left { padding: 40px 0 16px; }
+      .hero-right { padding: 8px 0 40px; }
       .why-inner { grid-template-columns: 1fr; gap: 40px; }
       .why-right { order: -1; }
       .why-img { aspect-ratio: 16/9; }
@@ -1402,6 +1403,7 @@
       .navbar-brand-name { font-size: 15px; letter-spacing: 0.04em; }
       .navbar-brand-loc { font-size: 10px; }
       .navbar-inner > .btn-preregister { display: none; }
+      .navbar-inner > .btn-book { display: none; }
       .burger { right: 16px; }
       .announce-ig { right: 16px; }
     }
