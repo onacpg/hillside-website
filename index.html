@@ -621,21 +621,17 @@
     .hero-carousel {
       position: relative;
       width: 100%;
-      height: auto;
-      aspect-ratio: 1650 / 1770;
+      height: 480px;
       border-radius: 20px;
       overflow: hidden;
-      background: var(--forest);
       box-shadow: 0 8px 40px rgba(40,44,21,0.13);
-      box-sizing: border-box;
-      padding: 8px;
     }
     .carousel-slide {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       display: block;
       opacity: 0;
       transition: opacity 0.9s ease;
@@ -1384,8 +1380,10 @@
         box-shadow: 0 2px 12px rgba(40,44,21,0.18);
       }
       .hero-inner { grid-template-columns: 1fr; min-height: unset; padding: 0 24px; }
-      .hero-left { padding: 40px 0 4px; }
-      .hero-right { padding: 2px 0 24px; }
+      .hero-left { padding: 56px 0; }
+      .hero-right { height: 320px; }
+      .hero-carousel { height: 100%; }
+      .hero-right img { height: 100%; }
       .hero h1 { font-size: clamp(26px, 8vw, 36px); }
       .anim-wrap { height: calc(clamp(20px, 6.5vw, 32px) * 1.25); }
       .anim-word { font-size: clamp(20px, 6.5vw, 32px); }
@@ -1612,7 +1610,14 @@
     </div>
     <div class="hero-right">
       <div class="hero-carousel">
-        <img src="brand_assets/Hillside-PreRegistrationPromos-v3.png" alt="Pre-registration promos: 10% off lifetime discount, 25% off first dental cleaning, 25% off first wellness lab test" class="carousel-slide c-active" />
+        <img src="brand_assets/Hillside-Image-5.jpg" alt="Grandmother and granddaughter with dog" class="carousel-slide c-active" style="object-position: center 30%;" />
+        <img src="brand_assets/Hillside-Image-4.jpg" alt="Couple with cat" class="carousel-slide" style="object-position: center 20%;" />
+        <img src="brand_assets/Hillside-Image-6v2.jpeg" alt="Two cats" class="carousel-slide" style="object-position: center 40%;" />
+        <div class="carousel-dots">
+          <span class="carousel-dot c-active"></span>
+          <span class="carousel-dot"></span>
+          <span class="carousel-dot"></span>
+        </div>
       </div>
     </div>
   </div>
